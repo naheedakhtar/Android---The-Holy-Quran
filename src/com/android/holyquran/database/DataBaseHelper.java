@@ -14,7 +14,9 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DataBaseHelper extends SQLiteOpenHelper {
 
 	private static String DB_PATH = "/data/data/com.android.holyquran.main/databases/";
-	private static String DB_NAME = "holyquran.sqlite";
+	private static String DB_NAME_PART1 = "holyquran10p1.sqlite";
+	private static String DB_NAME_PART2 = "holyquran10p2.sqlite";
+	private static String DB_NAME = "holyquran11.sqlite";
 	private SQLiteDatabase myDataBase;
 	private final Context myContext;
 
@@ -43,7 +45,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 			try {
 				copyDataBase();
 			} catch (IOException e) {
-				throw new Error("Error copying database");
+				e.printStackTrace();
 			}
 		}
 	}
@@ -77,7 +79,8 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 	private void copyDataBase() throws IOException {
 
 		// Open your local db as the input stream
-		InputStream myInput = myContext.getAssets().open(DB_NAME);
+		InputStream myInput1 = myContext.getAssets().open(DB_NAME_PART1);
+		InputStream myInput2 = myContext.getAssets().open(DB_NAME_PART2);
 
 		// Path to the just created empty db
 		String outFileName = DB_PATH + DB_NAME;
@@ -88,14 +91,21 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 		// transfer bytes from the inputfile to the outputfile
 		byte[] buffer = new byte[1024];
 		int length;
-		while ((length = myInput.read(buffer)) > 0) {
+		
+		while ((length = myInput1.read(buffer)) > 0) {
 			myOutput.write(buffer, 0, length);
 		}
+		myInput1.close();
+		
+		while ((length = myInput2.read(buffer)) > 0) {
+			myOutput.write(buffer, 0, length);
+		}
+		myInput2.close();
 
 		// Close the streams
 		myOutput.flush();
 		myOutput.close();
-		myInput.close();
+		
 	}
 
 	public void openDataBase() throws SQLException {

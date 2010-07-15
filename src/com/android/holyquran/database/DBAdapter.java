@@ -37,6 +37,7 @@ public class DBAdapter {
 
 	public void close() {
 		db.close();
+		dbHelper.close();
 	}
 
 	public void Truncate() {
@@ -67,8 +68,8 @@ public class DBAdapter {
 		
 		if (c.moveToFirst()) {
 			
-			Cursor cAyats = db.query("ayat", new String[] { "_id", "id_sourat", "ayat",
-			"content" }, "id_sourat =" + id, null, null,
+			Cursor cAyats = db.query("ayat", new String[] { "_id", "sourat_id", "ayat",
+			"content" }, "sourat_id =" + id, null, null,
 			null, null);
 			List<Ayat> ayatList = new ArrayList<Ayat>();
 			if (cAyats.moveToFirst()) {
