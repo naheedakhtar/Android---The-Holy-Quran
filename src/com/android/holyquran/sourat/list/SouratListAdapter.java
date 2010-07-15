@@ -47,10 +47,10 @@ public class SouratListAdapter extends BaseAdapter {
 		if (convertView == null) {
 			convertView = myInflater.inflate(R.layout.list_sourat, null);
 			holder = new ViewHolder();
-			holder._id = (TextView) convertView.findViewById(R.id.num);
-			holder.name = (TextView) convertView.findViewById(R.id.name);
+			holder._id = (TextView) convertView.findViewById(R.idSouratList.num);
+			holder.name = (TextView) convertView.findViewById(R.idSouratList.name);
 			holder.numAyats = (TextView) convertView
-					.findViewById(R.id.numAyats);
+					.findViewById(R.idSouratList.numAyats);
 			convertView.setTag(holder);
 		} else {
 			holder = (ViewHolder) convertView.getTag();

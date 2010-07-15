@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 public class SouratActivity extends Activity{
 
+	TextView title;
 	TextView content;
 	private DBAdapter dbAdapter;
 	
@@ -16,13 +17,15 @@ public class SouratActivity extends Activity{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		this.setContentView(R.layout.sourat);
-		content = (TextView) this.findViewById(R.id.content);
+		content = (TextView) this.findViewById(R.idSourat.content);
+		title = (TextView) this.findViewById(R.idSourat.title);
 		
 		dbAdapter = new DBAdapter(this);
 		dbAdapter.open();
 		
 		Integer _id = (Integer) this.getIntent().getExtras().get("_id");
-		content.setText(dbAdapter.searchSouratById(_id).getContent());
+		title.setText(dbAdapter.searchSouratById(_id).getName());
+		content.setText(dbAdapter.searchSouratById(_id).getAyats());
 		
 		dbAdapter.close();
 	}
