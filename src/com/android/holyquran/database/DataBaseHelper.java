@@ -14,11 +14,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DataBaseHelper extends SQLiteOpenHelper {
 
 	private static String DB_PATH = "/data/data/com.android.holyquran.main/databases/";
-
 	private static String DB_NAME = "holyquran.sqlite";
-
 	private SQLiteDatabase myDataBase;
-
 	private final Context myContext;
 
 	/**

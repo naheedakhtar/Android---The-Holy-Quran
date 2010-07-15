@@ -1,34 +1,20 @@
 package com.android.holyquran.main;
 
-import com.android.holyquran.database.DBAdapter;
-
-import android.app.ListActivity;
-import android.database.Cursor;
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.widget.SimpleCursorAdapter;
+import com.android.holyquran.main.R;
 
-public class Main extends ListActivity {
+public class Main extends Activity {
 
-	DBAdapter dbAdapter;
-	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
-		dbAdapter = new DBAdapter(this);
-		dbAdapter.open();
-		DataBind();
-	}
 
-	public void DataBind() {
-		Cursor c = dbAdapter.souratList();
-		startManagingCursor(c);
-		SimpleCursorAdapter adapter = new SimpleCursorAdapter(this,
-				R.layout.list_sourat, c,
-				new String[] { "name", "_id", "numAyats" }, new int[] {
-						R.id.name, R.id.num,
-						R.id.numAyats });
-		setListAdapter(adapter);
+		Intent intent = new Intent(this,
+				com.android.holyquran.sourat.list.SouratList.class);
+		this.startActivity(intent);
 	}
 
 }
