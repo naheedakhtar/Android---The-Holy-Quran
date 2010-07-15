@@ -23,6 +23,8 @@ public class SouratActivity extends Activity{
 		
 		Integer _id = (Integer) this.getIntent().getExtras().get("_id");
 		content.setText(dbAdapter.searchSouratById(_id).getContent());
+		
+		dbAdapter.close();
 	}
 
 }

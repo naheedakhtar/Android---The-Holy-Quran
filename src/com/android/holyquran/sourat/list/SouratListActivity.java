@@ -23,6 +23,8 @@ public class SouratListActivity extends ListActivity {
 		dbAdapter.open();
 		souratList = dbAdapter.souratList();
 		setListAdapter(new SouratListAdapter(this, souratList));
+		
+		dbAdapter.close();
 	}
 
 	@Override

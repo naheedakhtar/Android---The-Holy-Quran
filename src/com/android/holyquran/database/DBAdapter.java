@@ -52,6 +52,7 @@ public class DBAdapter {
 						.getString(2), c.getInt(3));
 				list.add(sourat);
 			} while (c.moveToNext());
+			c.close();
 			return list;
 		}
 		
@@ -66,6 +67,7 @@ public class DBAdapter {
 		if (c.moveToFirst()) {
 			Sourat sourat = new Sourat(c.getInt(0), c.getString(1), c
 					.getString(2), c.getInt(3));
+			c.close();
 			return sourat;
 		}
 		
