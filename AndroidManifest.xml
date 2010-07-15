@@ -12,7 +12,7 @@
 			</intent-filter>
 		</activity>
 		
-		<activity android:name="com.android.holyquran.sourat.list.SouratList" android:label="@string/app_name" />
+		<activity android:name="com.android.holyquran.sourat.list.SouratListActivity" android:label="@string/app_name" />
 		
 	</application>
 	

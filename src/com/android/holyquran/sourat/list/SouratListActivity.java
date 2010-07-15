@@ -10,7 +10,7 @@ import android.widget.ListView;
 import com.android.holyquran.database.DBAdapter;
 import com.android.holyquran.domain.Sourat;
 
-public class SouratList extends ListActivity {
+public class SouratListActivity extends ListActivity {
 
 	private DBAdapter dbAdapter;
 	private List<Sourat> souratList;

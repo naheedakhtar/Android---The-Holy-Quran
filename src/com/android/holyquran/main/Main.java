@@ -13,7 +13,7 @@ public class Main extends Activity {
 		setContentView(R.layout.main);
 
 		Intent intent = new Intent(this,
-				com.android.holyquran.sourat.list.SouratList.class);
+				com.android.holyquran.sourat.list.SouratListActivity.class);
 		this.startActivity(intent);
 	}
 
