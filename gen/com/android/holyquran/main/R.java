@@ -25,7 +25,8 @@ public final class R {
         public static final int searchSouratNumber=0x7f080000;
     }
     public static final class idSourat {
-        public static final int content=0x7f090001;
+        public static final int content=0x7f090002;
+        public static final int srollViewContent=0x7f090001;
         public static final int title=0x7f090000;
     }
     public static final class idSouratList {
