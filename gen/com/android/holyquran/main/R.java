@@ -15,24 +15,33 @@ public final class R {
         public static final int load=0x7f020001;
     }
     public static final class id {
-        public static final int ImageView01=0x7f060000;
+        public static final int ImageView01=0x7f070000;
+    }
+    public static final class idAbout {
+        public static final int author=0x7f050000;
+    }
+    public static final class idSearch {
+        public static final int searchAyatNumber=0x7f080001;
+        public static final int searchSouratNumber=0x7f080000;
     }
     public static final class idSourat {
-        public static final int content=0x7f070001;
-        public static final int title=0x7f070000;
+        public static final int content=0x7f090001;
+        public static final int title=0x7f090000;
     }
     public static final class idSouratList {
-        public static final int name=0x7f050000;
-        public static final int num=0x7f050002;
-        public static final int numAyats=0x7f050004;
-        public static final int numAyats_string=0x7f050003;
-        public static final int num_string=0x7f050001;
+        public static final int name=0x7f060000;
+        public static final int num=0x7f060002;
+        public static final int numAyats=0x7f060004;
+        public static final int numAyats_string=0x7f060003;
+        public static final int num_string=0x7f060001;
     }
     public static final class layout {
-        public static final int list_sourat=0x7f030000;
-        public static final int load=0x7f030001;
-        public static final int main=0x7f030002;
-        public static final int sourat=0x7f030003;
+        public static final int about=0x7f030000;
+        public static final int list_sourat=0x7f030001;
+        public static final int load=0x7f030002;
+        public static final int main=0x7f030003;
+        public static final int search=0x7f030004;
+        public static final int sourat=0x7f030005;
     }
     public static final class string {
         public static final int app_name=0x7f040000;

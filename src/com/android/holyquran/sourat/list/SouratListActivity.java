@@ -5,6 +5,8 @@ import java.util.List;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
 
@@ -33,6 +35,18 @@ public class SouratListActivity extends ListActivity {
 		Intent intent = new Intent(this, com.android.holyquran.sourat.SouratActivity.class);
 		intent.putExtra("_id", souratList.get(position).get_id());
 		this.startActivity(intent);
+	}
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		com.android.holyquran.menu.Menu.getMenu(menu);
+		return super.onCreateOptionsMenu(menu);
+	}
+
+	@Override
+	public boolean onMenuItemSelected(int featureId, MenuItem item) {
+		com.android.holyquran.menu.Menu.actionMenu(item, this);
+		return super.onMenuItemSelected(featureId, item);
 	}
 
 }

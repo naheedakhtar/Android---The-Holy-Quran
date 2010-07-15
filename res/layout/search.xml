@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="wrap_content" android:orientation="vertical"
+	android:layout_width="wrap_content">
+
+	<EditText android:text="" android:id="@+idSearch/searchSouratNumber"
+		android:layout_width="fill_parent" android:width="200px" android:layout_height="wrap_content"></EditText>
+	<EditText android:text="" android:id="@+idSearch/searchAyatNumber"
+		android:layout_width="fill_parent" android:width="200px" android:layout_height="wrap_content"></EditText>
+
+</LinearLayout>

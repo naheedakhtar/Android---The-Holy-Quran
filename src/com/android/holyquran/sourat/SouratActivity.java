@@ -5,6 +5,8 @@ import com.android.holyquran.main.R;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.TextView;
 
 public class SouratActivity extends Activity{
@@ -28,6 +30,18 @@ public class SouratActivity extends Activity{
 		content.setText(dbAdapter.searchSouratById(_id).getAyats());
 		
 		dbAdapter.close();
+	}
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		com.android.holyquran.menu.Menu.getMenu(menu);
+		return super.onCreateOptionsMenu(menu);
+	}
+
+	@Override
+	public boolean onMenuItemSelected(int featureId, MenuItem item) {
+		com.android.holyquran.menu.Menu.actionMenu(item, this);
+		return super.onMenuItemSelected(featureId, item);
 	}
 
 }
