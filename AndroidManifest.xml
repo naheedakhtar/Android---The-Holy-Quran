@@ -20,6 +20,8 @@
 		
 		<activity android:name="com.android.holyquran.menu.Search" android:label="@string/app_name" />
 		
+		<activity android:name="com.android.holyquran.ayat.list.AyatListActivity" android:label="@string/app_name" />
+		
 	</application>
 	
 	<uses-sdk android:minSdkVersion="7" />

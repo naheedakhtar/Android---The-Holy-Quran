@@ -3,4 +3,6 @@
 	<string name="app_name">The Holy Quran</string>
 	<string name="souratNumber">Verset numéro : </string>
 	<string name="ayatsNumber">Nombre d\'ayats : </string>
+	<string name="search">Rechercher : </string>
+	<string name="searchButton">Rechercher</string>
 </resources>

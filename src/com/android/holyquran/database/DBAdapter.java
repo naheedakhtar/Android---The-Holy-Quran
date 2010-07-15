@@ -46,7 +46,7 @@ public class DBAdapter {
 	public List<Sourat> souratList() {
 		Cursor c = db.query("sourat", new String[] { "_id", "name", "content",
 				"numAyats" }, null, null, null, null, null);
-		
+
 		if (c.moveToFirst()) {
 			List<Sourat> list = new ArrayList<Sourat>();
 			do {
@@ -57,24 +57,24 @@ public class DBAdapter {
 			c.close();
 			return list;
 		}
-		
+
 		return Collections.emptyList();
 	}
 
 	public Sourat searchSouratById(Integer id) {
 		Cursor c = db.query("sourat", new String[] { "_id", "name", "content",
-				"numAyats" }, "_id =" + id, null, null,
-				null, null);
-		
+				"numAyats" }, "_id =" + id, null, null, null, null);
+
 		if (c.moveToFirst()) {
-			
-			Cursor cAyats = db.query("ayat", new String[] { "_id", "sourat_id", "ayat",
-			"content" }, "sourat_id =" + id, null, null,
-			null, null);
+
+			Cursor cAyats = db.query("ayat", new String[] { "_id", "sourat_id",
+					"ayat", "content" }, "sourat_id =" + id, null, null, null,
+					null);
 			List<Ayat> ayatList = new ArrayList<Ayat>();
 			if (cAyats.moveToFirst()) {
 				do {
-					Ayat ayat = new Ayat(cAyats.getInt(0), cAyats.getInt(1),cAyats.getInt(2), cAyats.getString(3));
+					Ayat ayat = new Ayat(cAyats.getInt(0), cAyats.getInt(1),
+							cAyats.getInt(2), cAyats.getString(3));
 					ayatList.add(ayat);
 				} while (cAyats.moveToNext());
 				cAyats.close();
@@ -85,8 +85,25 @@ public class DBAdapter {
 			c.close();
 			return sourat;
 		}
-		
+
 		return null;
+	}
+
+	public List<Ayat> searchAyatsByTerm(String term) {
+		Cursor c = db.query("ayat", new String[] { "_id", "ayat", "sourat_id", "content"}, "content like '%" + term + "%'", null, null, null, null);
+
+		if (c.moveToFirst()) {
+			List<Ayat> list = new ArrayList<Ayat>();
+			do {
+				Ayat ayat = new Ayat(c.getInt(0), c.getInt(2), c.getInt(1), c.getString(3));
+				list.add(ayat);
+			} while (c.moveToNext());
+			c.close();
+			return list;
+		}
+
+		return Collections.emptyList();
+
 	}
 
 }
