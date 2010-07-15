@@ -35,11 +35,8 @@ public final class R {
         public static final int title=0x7f0a0000;
     }
     public static final class idSouratList {
+        public static final int informations=0x7f070001;
         public static final int name=0x7f070000;
-        public static final int num=0x7f070002;
-        public static final int numAyats=0x7f070004;
-        public static final int numAyats_string=0x7f070003;
-        public static final int num_string=0x7f070001;
     }
     public static final class layout {
         public static final int about=0x7f030000;
@@ -52,6 +49,8 @@ public final class R {
     }
     public static final class string {
         public static final int app_name=0x7f040000;
+        public static final int ayat=0x7f040006;
+        public static final int ayats=0x7f040005;
         public static final int ayatsNumber=0x7f040002;
         public static final int search=0x7f040003;
         public static final int searchButton=0x7f040004;

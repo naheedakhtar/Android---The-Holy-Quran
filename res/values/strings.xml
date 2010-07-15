@@ -5,4 +5,6 @@
 	<string name="ayatsNumber">Nombre d\'ayats : </string>
 	<string name="search">Rechercher : </string>
 	<string name="searchButton">Rechercher</string>
+	<string name="ayats">ayats</string>
+	<string name="ayat">ayat</string>
 </resources>

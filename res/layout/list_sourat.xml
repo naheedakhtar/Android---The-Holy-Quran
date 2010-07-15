@@ -8,14 +8,6 @@
 		android:textStyle="bold" android:textColor="#FFFFFFFF" />
 
 	<TextView android:layout_width="wrap_content"
-		android:layout_height="wrap_content" android:id="@+idSouratList/num_string" android:text="@+string/souratNumber"  android:textSize="10px" />
-	<TextView android:layout_width="wrap_content"
-		android:layout_height="wrap_content" android:id="@+idSouratList/num"  android:textSize="10px" />
-
-	<TextView android:layout_width="wrap_content"
-		android:layout_height="wrap_content" android:id="@+idSouratList/numAyats_string" android:text="@+string/ayatsNumber"  android:textSize="10px" />
-	<TextView android:layout_width="wrap_content"
-		android:layout_height="wrap_content" android:id="@+idSouratList/numAyats"
-		android:textColor="#FF808080"  android:textSize="10px" />
+		android:layout_height="wrap_content" android:id="@+idSouratList/informations"  android:textSize="10px" />
 
 </LinearLayout>

@@ -35,10 +35,8 @@ public class SouratListAdapter extends BaseAdapter {
 	}
 
 	public static class ViewHolder {
-		TextView _id;
 		TextView name;
-		// TextView content;
-		TextView numAyats;
+		TextView informations;
 	}
 
 	public View getView(int position, View convertView, ViewGroup parent) {
@@ -47,19 +45,16 @@ public class SouratListAdapter extends BaseAdapter {
 		if (convertView == null) {
 			convertView = myInflater.inflate(R.layout.list_sourat, null);
 			holder = new ViewHolder();
-			holder._id = (TextView) convertView.findViewById(R.idSouratList.num);
 			holder.name = (TextView) convertView.findViewById(R.idSouratList.name);
-			holder.numAyats = (TextView) convertView
-					.findViewById(R.idSouratList.numAyats);
+			holder.informations = (TextView) convertView
+					.findViewById(R.idSouratList.informations);
 			convertView.setTag(holder);
 		} else {
 			holder = (ViewHolder) convertView.getTag();
 		}
-		
-		holder._id.setText(souratList.get(position).get_id().toString());
+		String informations = souratList.get(position).getNumAyats().toString() + " ayats" + " - Sourat n°" + souratList.get(position).get_id().toString();
 		holder.name.setText(souratList.get(position).getName().toString());
-		holder.numAyats.setText(souratList.get(position).getNumAyats()
-				.toString());
+		holder.informations.setText(informations);
 		
 		return convertView;
 	}
