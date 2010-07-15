@@ -41,21 +41,24 @@ public class SouratListAdapter extends BaseAdapter {
 
 	public View getView(int position, View convertView, ViewGroup parent) {
 		ViewHolder holder;
-		
+
 		if (convertView == null) {
 			convertView = myInflater.inflate(R.layout.list_sourat, null);
 			holder = new ViewHolder();
-			holder.name = (TextView) convertView.findViewById(R.idSouratList.name);
+			holder.name = (TextView) convertView
+					.findViewById(R.idSouratList.name);
 			holder.informations = (TextView) convertView
 					.findViewById(R.idSouratList.informations);
 			convertView.setTag(holder);
 		} else {
 			holder = (ViewHolder) convertView.getTag();
 		}
-		String informations = souratList.get(position).getNumAyats().toString() + " ayats" + " - Sourat n°" + souratList.get(position).get_id().toString();
+		String informations = "Sourate n°"
+				+ souratList.get(position).get_id().toString() + " - "
+				+ souratList.get(position).getNumAyats().toString() + " ayats";
 		holder.name.setText(souratList.get(position).getName().toString());
 		holder.informations.setText(informations);
-		
+
 		return convertView;
 	}
 

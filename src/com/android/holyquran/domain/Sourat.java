@@ -52,7 +52,7 @@ public class Sourat {
 	public String getAyats (){
 		String text ="";
 		for (Ayat ayat : ayatList) {
-			text +=  ayat.getSouratId() + "." + ayat.getAyat() + ". " + ayat.getContent() + "\n";
+			text +=  ayat.getSouratId() + "." + ayat.getAyat() + ". " + ayat.getContent() + "\n" + "\n";
 		}
 		return text;
 	}

@@ -20,12 +20,20 @@ public class AyatListActivity extends ListActivity {
 		super.onCreate(savedInstanceState);
 
 		String term = this.getIntent().getExtras().getString("term");
+		Integer numSourat = this.getIntent().getExtras().getInt("numSourat");
+		Integer numAyat = this.getIntent().getExtras().getInt("numAyat");
 
 		dbAdapter = new DBAdapter(this);
 		dbAdapter.open();
-		ayatList = dbAdapter.searchAyatsByTerm(term);
-		setListAdapter(new AyatListAdapter(this, ayatList));
 
+		if (numSourat != null && numAyat != null) {
+			ayatList = dbAdapter.searchAyat(numSourat,
+					numAyat);
+		} else {
+			ayatList = dbAdapter.searchAyatsByTerm(term);
+		}
+
+		setListAdapter(new AyatListAdapter(this, ayatList));
 		dbAdapter.close();
 	}
 

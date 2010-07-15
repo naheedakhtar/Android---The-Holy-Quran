@@ -54,7 +54,9 @@ public class AyatListAdapter extends BaseAdapter {
 			holder = (ViewHolder) convertView.getTag();
 		}
 
-		holder.nameAndMore.setText(ayatList.get(position).getSouratId().toString() + ":" + ayatList.get(position).getAyat().toString());
+		holder.nameAndMore.setText(ayatList.get(position).getSouratId()
+				.toString()
+				+ "." + ayatList.get(position).getAyat().toString() + " ");
 		holder.ayat.setText(ayatList.get(position).getContent().toString());
 
 		return convertView;

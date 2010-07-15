@@ -16,7 +16,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 	private static String DB_PATH = "/data/data/com.android.holyquran.main/databases/";
 	private static String DB_NAME_PART1 = "holyquran10p1.sqlite";
 	private static String DB_NAME_PART2 = "holyquran10p2.sqlite";
-	private static String DB_NAME = "holyquran11.sqlite";
+	private static String DB_NAME = "holyquran12.sqlite";
 	private SQLiteDatabase myDataBase;
 	private final Context myContext;
 

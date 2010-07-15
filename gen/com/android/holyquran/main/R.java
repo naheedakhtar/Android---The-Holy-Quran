@@ -24,15 +24,19 @@ public final class R {
         public static final int ayat=0x7f060001;
         public static final int nameAndMore=0x7f060000;
     }
-    public static final class idSearch {
+    public static final class idSearchAyat {
         public static final int ButtonSearch=0x7f090002;
-        public static final int searchEditText=0x7f090001;
-        public static final int searchTextView=0x7f090000;
+        public static final int searchAyat=0x7f090001;
+        public static final int searchSourat=0x7f090000;
+    }
+    public static final class idSearchTerm {
+        public static final int ButtonSearch=0x7f0a0001;
+        public static final int searchEditText=0x7f0a0000;
     }
     public static final class idSourat {
-        public static final int content=0x7f0a0002;
-        public static final int srollViewContent=0x7f0a0001;
-        public static final int title=0x7f0a0000;
+        public static final int content=0x7f0b0002;
+        public static final int srollViewContent=0x7f0b0001;
+        public static final int title=0x7f0b0000;
     }
     public static final class idSouratList {
         public static final int informations=0x7f070001;
@@ -44,16 +48,27 @@ public final class R {
         public static final int list_sourat=0x7f030002;
         public static final int load=0x7f030003;
         public static final int main=0x7f030004;
-        public static final int search=0x7f030005;
-        public static final int sourat=0x7f030006;
+        public static final int search_ayat=0x7f030005;
+        public static final int search_term=0x7f030006;
+        public static final int sourat=0x7f030007;
     }
     public static final class string {
+        public static final int about=0x7f040001;
+        /**  Window Title 
+         */
         public static final int app_name=0x7f040000;
-        public static final int ayat=0x7f040006;
-        public static final int ayats=0x7f040005;
-        public static final int ayatsNumber=0x7f040002;
-        public static final int search=0x7f040003;
-        public static final int searchButton=0x7f040004;
-        public static final int souratNumber=0x7f040001;
+        public static final int ayat=0x7f04000c;
+        public static final int ayats=0x7f04000b;
+        public static final int ayatsNumber=0x7f040009;
+        public static final int list_ayat=0x7f040002;
+        public static final int list_sourat=0x7f040003;
+        public static final int load=0x7f040004;
+        public static final int searchAyat=0x7f040006;
+        public static final int searchButton=0x7f04000a;
+        public static final int searchTerm=0x7f040005;
+        public static final int sourat=0x7f040007;
+        /**  Others 
+         */
+        public static final int souratNumber=0x7f040008;
     }
 }

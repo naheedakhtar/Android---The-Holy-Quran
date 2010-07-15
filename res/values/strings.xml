@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="app_name">The Holy Quran</string>
+    <!-- Window Title -->
+	<string name="app_name">Le Saint Coran</string>
+	<string name="about">Le Saint Coran- A propos</string>
+	<string name="list_ayat">Le Saint Coran - Résultats de recherche</string>
+	<string name="list_sourat">Le Saint Coran - Sourates</string>
+	<string name="load">Le Saint Coran - Chargement</string>
+	<string name="searchTerm">Le Saint Coran - Rechercher un mot</string>
+	<string name="searchAyat">Le Saint Coran - Rechercher un ayat</string>
+	<string name="sourat">Le Saint Coran - Une sourate</string>
+	<!-- Others -->
 	<string name="souratNumber">Verset numéro : </string>
 	<string name="ayatsNumber">Nombre d\'ayats : </string>
-	<string name="search">Rechercher : </string>
 	<string name="searchButton">Rechercher</string>
 	<string name="ayats">ayats</string>
 	<string name="ayat">ayat</string>

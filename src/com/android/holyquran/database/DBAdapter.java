@@ -105,5 +105,22 @@ public class DBAdapter {
 		return Collections.emptyList();
 
 	}
+	
+	public List<Ayat> searchAyat(Integer numSourat, Integer numAyat) {
+		Cursor c = db.query("ayat", new String[] { "_id", "ayat", "sourat_id", "content"}, "sourat_id = " + numSourat + " and ayat = " + numAyat, null, null, null, null);
+
+		if (c.moveToFirst()) {
+			List<Ayat> list = new ArrayList<Ayat>();
+			do {
+				Ayat ayat = new Ayat(c.getInt(0), c.getInt(2), c.getInt(1), c.getString(3));
+				list.add(ayat);
+			} while (c.moveToNext());
+			c.close();
+			return list;
+		}
+
+		return Collections.emptyList();
+
+	}
 
 }
