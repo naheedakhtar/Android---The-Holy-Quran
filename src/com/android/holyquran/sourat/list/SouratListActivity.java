@@ -3,6 +3,7 @@ package com.android.holyquran.sourat.list;
 import java.util.List;
 
 import android.app.ListActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
@@ -27,7 +28,9 @@ public class SouratListActivity extends ListActivity {
 	@Override
 	protected void onListItemClick(ListView l, View v, int position, long id) {
 		super.onListItemClick(l, v, position, id);
-		System.out.println(souratList.get(position).getName());
+		Intent intent = new Intent(this, com.android.holyquran.sourat.SouratActivity.class);
+		intent.putExtra("_id", souratList.get(position).get_id());
+		this.startActivity(intent);
 	}
 
 }
