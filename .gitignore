@@ -3,3 +3,4 @@
 /.classpath
 bin/**
 /assets/holyquran.sqlite
+/.settings/org.eclipse.jdt.core.prefs
